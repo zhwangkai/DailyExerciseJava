@@ -1,0 +1,5 @@
+name,age,gender,isParantJoinProject,taxYearlyPayment,title,hasBrothers,noCrime,dateApply,score
+Tom,30,male,TRUE,1000000,engineer,TRUE,TRUE,2021/2/3,0
+Sherry,24,female,FALSE,500000,engineer,TRUE,FALSE,2021/2/4,0
+Michael,40,male,FALSE,1000000,waiter,FALSE,TRUE,2021/2/5,0
+Michael,41,male,FALSE,1000001,waiter,TRUE,FALSE,2021/2/6,0
