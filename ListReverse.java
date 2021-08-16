@@ -13,17 +13,17 @@ public class ListReverse {
 		head = tail = lr.new Node(0);
 		for (int i = 1; i < 10; i++) {
 			Node p = lr.new Node(i);
-			tail.next = p;
-			tail = p;
+			head.next = p;
+			head = p;
 		}
-		tail = head;
-		while(tail != null) {
-			System.out.println(tail.data);
-			tail = tail.next;
+		head = tail;
+		while(head != null) {
+			System.out.print(head.data + "-->");
+			head = head.next;
 		}
 		head = reverse(head);
 		while(head != null) {
-			System.out.println(head.data);
+			System.out.println(head.data + " ");
 			head = head.next;
 		}
 	}
