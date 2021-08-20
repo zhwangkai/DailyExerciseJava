@@ -1,4 +1,4 @@
-package ThreadSellTicket;
+package ReadNumMultiThread;
 
 public class ReadNumMultiThread {
     volatile int i = 1;
@@ -23,18 +23,19 @@ public class ReadNumMultiThread {
                             System.out.println(rn.i + " - Thread" + name);
                             rn.i ++;
                         }
-
-//
-//                        try {
-//                            if (rn.i == 101) {
-//                                notifyAll();
-//                                return;
-//                            } else {
-//                                wait();
-//                            }
-//                        } catch (InterruptedException e) {
-//                            e.printStackTrace();
+//                        if (rn.i % 3 == 1) {
+//                            System.out.println("======");
 //                        }
+                        try {
+                            if (rn.i == 101) {
+                                notifyAll();
+                                return;
+                            } else {
+                                wait();
+                            }
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
             }
@@ -44,9 +45,9 @@ public class ReadNumMultiThread {
         Thread t2 = new Thread(runnable);
         Thread t3 = new Thread(runnable);
 
-        t1.setName("0");
-        t2.setName("1");
-        t3.setName("2");
+        t1.setName("1");
+        t2.setName("2");
+        t3.setName("0");
         t1.start();
         t2.start();
         t3.start();
