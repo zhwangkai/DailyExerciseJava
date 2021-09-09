@@ -15,7 +15,7 @@ class PrintNum {
     private int end;
 
     public PrintNum(int current, int begin, int end) {
-        num = begin;
+        this.num = begin;
         this.current = current;
         this.end = end;
     }
